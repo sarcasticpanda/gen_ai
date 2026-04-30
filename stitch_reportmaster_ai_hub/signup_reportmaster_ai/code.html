@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request Access - ReportMaster AI</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#13131b",
+                        "primary-container": "#8083ff",
+                        "outline-variant": "#464554",
+                        "surface-tint": "#c0c1ff",
+                        "tertiary-fixed": "#ffdcc5",
+                        "error-container": "#93000a",
+                        "tertiary": "#ffb783",
+                        "surface-container-lowest": "#0d0d15",
+                        "on-tertiary-container": "#452000",
+                        "secondary-container": "#2f3aa3",
+                        "primary-fixed": "#e1e0ff",
+                        "on-tertiary-fixed": "#301400",
+                        "surface-bright": "#393841",
+                        "on-tertiary": "#4f2500",
+                        "on-secondary-fixed-variant": "#2f3aa3",
+                        "on-surface": "#e4e1ed",
+                        "on-primary-fixed": "#07006c",
+                        "error": "#ffb4ab",
+                        "primary": "#c0c1ff",
+                        "surface-container": "#1f1f27",
+                        "background": "#13131b",
+                        "on-surface-variant": "#c7c4d7",
+                        "surface-dim": "#13131b",
+                        "on-secondary-container": "#a8afff",
+                        "surface-container-highest": "#34343d",
+                        "surface-container-low": "#1b1b23",
+                        "inverse-on-surface": "#303038",
+                        "secondary-fixed": "#e0e0ff",
+                        "surface-variant": "#34343d",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-secondary-fixed": "#000767",
+                        "on-background": "#e4e1ed",
+                        "tertiary-container": "#d97721",
+                        "surface-container-high": "#292932",
+                        "on-secondary": "#131e8c",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "on-primary": "#1000a9",
+                        "outline": "#908fa0",
+                        "inverse-primary": "#494bd6",
+                        "secondary": "#bdc2ff",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "inverse-surface": "#e4e1ed",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "on-primary-container": "#0d0096",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "layout_margin": "24px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "layout_gutter": "16px",
+                        "xl": "32px",
+                        "sm": "12px",
+                        "xxs": "4px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "body": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "heading": ["Inter", "sans-serif"],
+                        "data-tabular": ["JetBrains Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "body": ["15px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "heading": ["22px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "data-tabular": ["14px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen antialiased flex flex-col md:flex-row selection:bg-primary-container/30 selection:text-primary">
+<!-- Left Panel: Branding & Intro -->
+<div class="flex-1 bg-surface border-b md:border-b-0 md:border-r border-outline-variant/30 flex flex-col p-lg md:p-xl lg:p-[64px] relative overflow-hidden justify-between min-h-[353px] md:min-h-screen">
+<!-- Decorative Ambient Light -->
+<div class="absolute top-0 left-0 w-full h-[500px] bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-inverse-primary/10 via-background/0 to-background/0 pointer-events-none"></div>
+<!-- Branding Header -->
+<div class="flex items-center gap-sm z-10">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center shadow-inner">
+<span class="font-display text-[16px] font-bold text-inverse-surface tracking-tighter">RM</span>
+</div>
+<span class="font-heading text-heading text-[20px] text-on-surface tracking-tight">ReportMaster AI</span>
+</div>
+<!-- Core Message -->
+<div class="max-w-[480px] z-10 mt-xl md:mt-0 relative">
+<h1 class="font-display text-display text-on-surface mb-md">Join your team's intelligence hub.</h1>
+<p class="font-body text-body text-on-surface-variant text-[16px]">
+                Institutional grade analytics requires verified access. Create your profile below to request provisioning from your workspace administrator.
+            </p>
+<!-- Aesthetic Graphic Element (Abstract data representation) -->
+<div class="mt-xl hidden md:flex gap-2 opacity-40">
+<div class="w-1 h-16 bg-gradient-to-t from-primary/0 to-primary rounded-full"></div>
+<div class="w-1 h-24 bg-gradient-to-t from-primary/0 to-primary rounded-full translate-y-4"></div>
+<div class="w-1 h-12 bg-gradient-to-t from-primary/0 to-primary rounded-full translate-y-2"></div>
+<div class="w-1 h-20 bg-gradient-to-t from-secondary/0 to-secondary rounded-full translate-y-6"></div>
+<div class="w-1 h-10 bg-gradient-to-t from-secondary/0 to-secondary rounded-full"></div>
+</div>
+</div>
+<!-- Structural Spacer for Flex Balance -->
+<div class="hidden md:block z-10">
+<p class="font-data-tabular text-data-tabular text-on-surface-variant/50 text-[12px]">SYS_ENV: SECURE_PROVISIONING</p>
+</div>
+</div>
+<!-- Right Panel: Signup Form -->
+<div class="flex-1 bg-background flex flex-col justify-center items-center p-lg md:p-xl lg:py-16 overflow-y-auto">
+<div class="w-full max-w-[420px] flex flex-col gap-lg">
+<!-- Form Header -->
+<div class="mb-xs">
+<h2 class="font-heading text-heading text-on-surface">Create your account</h2>
+<p class="font-body text-body text-on-surface-variant mt-xs text-[14px]">Access requires admin approval</p>
+</div>
+<form class="flex flex-col gap-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface" for="name">Full Name</label>
+<input class="h-[44px] bg-surface-container rounded-DEFAULT border border-outline-variant/50 text-on-surface px-md font-body text-body focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface-variant/40" id="name" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<!-- Corporate Email -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface" for="email">Corporate Email</label>
+<input class="h-[44px] bg-surface-container rounded-DEFAULT border border-outline-variant/50 text-on-surface px-md font-body text-body focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface-variant/40" id="email" placeholder="jane.doe@company.com" required="" type="email"/>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface" for="password">Password</label>
+<div class="relative">
+<input class="w-full h-[44px] bg-surface-container rounded-DEFAULT border border-outline-variant/50 text-on-surface px-md font-body text-body focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface-variant/40" id="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<!-- Password Strength Indicator -->
+<div class="mt-2 w-full">
+<div class="flex gap-1 h-1.5">
+<div class="flex-1 bg-tertiary-container rounded-full"></div>
+<div class="flex-1 bg-tertiary-container rounded-full"></div>
+<div class="flex-1 bg-surface-container-highest rounded-full"></div>
+<div class="flex-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<div class="flex justify-between items-center mt-1.5">
+<span class="font-label-caps text-label-caps text-[10px] text-tertiary-container">Fair strength</span>
+<span class="font-body text-body text-[11px] text-on-surface-variant">Must be at least 12 characters</span>
+</div>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface" for="confirm_password">Confirm Password</label>
+<input class="h-[44px] bg-surface-container rounded-DEFAULT border border-outline-variant/50 text-on-surface px-md font-body text-body focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface-variant/40" id="confirm_password" placeholder="••••••••" required="" type="password"/>
+</div>
+<!-- Terms & Conditions -->
+<div class="flex items-start gap-sm mt-xs">
+<div class="flex items-center h-5">
+<input class="w-4 h-4 rounded-sm border-outline-variant/50 bg-surface-container text-inverse-primary focus:ring-inverse-primary/20 focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer transition-colors" id="terms" required="" type="checkbox"/>
+</div>
+<label class="font-body text-body text-[13px] text-on-surface-variant leading-[1.4] cursor-pointer" for="terms">
+                        I agree to the <a class="text-inverse-primary hover:text-primary transition-colors" href="#">Terms of Service</a> and <a class="text-inverse-primary hover:text-primary transition-colors" href="#">Privacy Policy</a>. I understand this is an institutional system.
+                    </label>
+</div>
+<!-- Call to Action -->
+<button class="mt-sm w-full h-[44px] bg-inverse-primary text-inverse-surface font-label-caps text-label-caps rounded-DEFAULT border-t border-primary/50 flex justify-center items-center gap-xs hover:bg-inverse-primary/90 transition-all active:scale-[0.99] group" type="submit">
+                    Request Access
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<!-- Info Banner (Admin Review) -->
+<div class="bg-primary-container/10 border border-primary-container/20 rounded-DEFAULT p-md flex items-start gap-sm mt-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">info</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary-container mb-1">Admin Review Required</h4>
+<p class="font-body text-body text-[13px] text-on-surface-variant leading-[1.5]">
+                        Your account will remain pending until an administrator from your registered domain approves the request. You will receive an email notification upon activation.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

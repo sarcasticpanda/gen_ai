@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ReportMaster AI - Login</title>
+<!-- Google Fonts: Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#13131b",
+                      "primary-container": "#8083ff",
+                      "outline-variant": "#464554",
+                      "surface-tint": "#c0c1ff",
+                      "tertiary-fixed": "#ffdcc5",
+                      "error-container": "#93000a",
+                      "tertiary": "#ffb783",
+                      "surface-container-lowest": "#0d0d15",
+                      "on-tertiary-container": "#452000",
+                      "secondary-container": "#2f3aa3",
+                      "primary-fixed": "#e1e0ff",
+                      "on-tertiary-fixed": "#301400",
+                      "surface-bright": "#393841",
+                      "on-tertiary": "#4f2500",
+                      "on-secondary-fixed-variant": "#2f3aa3",
+                      "on-surface": "#e4e1ed",
+                      "on-primary-fixed": "#07006c",
+                      "error": "#ffb4ab",
+                      "primary": "#c0c1ff",
+                      "surface-container": "#1f1f27",
+                      "background": "#13131b",
+                      "on-surface-variant": "#c7c4d7",
+                      "surface-dim": "#13131b",
+                      "on-secondary-container": "#a8afff",
+                      "surface-container-highest": "#34343d",
+                      "surface-container-low": "#1b1b23",
+                      "inverse-on-surface": "#303038",
+                      "secondary-fixed": "#e0e0ff",
+                      "surface-variant": "#34343d",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-secondary-fixed": "#000767",
+                      "on-background": "#e4e1ed",
+                      "tertiary-container": "#d97721",
+                      "surface-container-high": "#292932",
+                      "on-secondary": "#131e8c",
+                      "secondary-fixed-dim": "#bdc2ff",
+                      "on-primary": "#1000a9",
+                      "outline": "#908fa0",
+                      "inverse-primary": "#494bd6",
+                      "secondary": "#bdc2ff",
+                      "on-tertiary-fixed-variant": "#703700",
+                      "inverse-surface": "#e4e1ed",
+                      "tertiary-fixed-dim": "#ffb783",
+                      "on-primary-container": "#0d0096",
+                      "on-error": "#690005"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "layout_margin": "24px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "layout_gutter": "16px",
+                      "xl": "32px",
+                      "sm": "12px",
+                      "xxs": "4px",
+                      "xs": "8px"
+              },
+              "fontFamily": {
+                      "body": ["Inter"],
+                      "display": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "heading": ["Inter"],
+                      "data-tabular": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "body": ["15px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "display": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "heading": ["22px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                      "data-tabular": ["14px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body text-body antialiased min-h-screen flex flex-col md:flex-row">
+<!-- Left Panel: Branding & Illustration -->
+<div class="relative w-full md:w-[45%] lg:w-[50%] bg-surface flex flex-col justify-between p-layout_margin lg:p-xl border-b md:border-b-0 md:border-r border-[#1E2333] overflow-hidden min-h-[353px] md:min-h-screen">
+<!-- Abstract Background Illustration -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-screen">
+<img alt="Abstract data flow illustration" class="w-full h-full object-cover" data-alt="A sophisticated abstract digital illustration representing high-speed financial data flow. The composition features glowing, sharp geometric lines and intersecting grids in deep indigo and violet hues against a pitch-black background. The style is clinical, highly technical, and institutional, reminiscent of a modern Bloomberg terminal data visualization. Lighting is high-contrast, emphasizing precision, security, and world-class enterprise software aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXp3fqxvbXPNV6Jejt43JOe2j5vXAHJ6HQIzUN5cPry4361ALG8AJEnydUn5U_15pCzpZ0ye27lehUib-cSqKh9-3VkJD1NQ4zen2XPWBQ5WT7sO82ISBXkfk51wDOGMv2Nd6o2ShDoOq7gMjckd3dDsEETqNjX60VT9WoxfED_TLrC4OaeakxjWKxNUGoUJrJyywAlDa2OfEXwNePDbRi0OEAODjAaIR5jcEnHDCsfGrTkQuOCdFe5LnCH_wfEn6KelfBl8lf8kk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-transparent"></div>
+</div>
+<!-- Header / Logo -->
+<div class="relative z-10 flex items-center gap-xs">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-inverse-primary to-secondary-container flex items-center justify-center text-white font-display font-bold text-[16px] border-t border-white/20">
+                RM
+            </div>
+<span class="font-heading text-heading text-on-surface tracking-tight">ReportMaster AI</span>
+</div>
+<!-- Value Proposition -->
+<div class="relative z-10 mt-xl md:mt-0 max-w-md">
+<h1 class="font-display text-display text-on-surface mb-md">
+                Your financial knowledge, instantly.
+            </h1>
+<p class="font-body text-body text-on-surface-variant mb-xl">
+                Institutional-grade intelligence processing. Secure, clinical, and built for high-stakes analysis.
+            </p>
+<ul class="space-y-sm">
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-body text-body text-on-surface">Real-time terminal integration</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-body text-body text-on-surface">SOC2 Type II compliant environment</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-body text-body text-on-surface">Automated ledger reconciliation</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Panel: Login Form -->
+<div class="w-full md:w-[55%] lg:w-[50%] bg-background flex flex-col items-center justify-center p-layout_margin lg:p-xl relative">
+<div class="w-full max-w-[420px] flex flex-col gap-layout_gutter">
+<!-- Form Header -->
+<div class="mb-sm text-center md:text-left">
+<h2 class="font-display text-display text-on-surface mb-xxs">Welcome back</h2>
+<p class="font-body text-body text-on-surface-variant">Sign in to your workspace</p>
+</div>
+<!-- Login Form -->
+<form class="flex flex-col gap-md w-full">
+<!-- Email Field -->
+<div class="flex flex-col gap-xxs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="email">Email Address</label>
+<input class="w-full bg-surface-container border border-[#1E2333] rounded-DEFAULT px-md py-sm font-body text-body text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-inverse-primary focus:ring-2 focus:ring-inverse-primary/20 transition-all" id="email" placeholder="name@institution.com" required="" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-xxs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="password">Password</label>
+<div class="relative w-full">
+<input class="w-full bg-surface-container border border-[#1E2333] rounded-DEFAULT px-md py-sm pr-xl font-body text-body text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:border-inverse-primary focus:ring-2 focus:ring-inverse-primary/20 transition-all" id="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Utilities -->
+<div class="flex items-center justify-between mt-xxs">
+<label class="flex items-center gap-xs cursor-pointer group">
+<div class="relative flex items-center justify-center w-4 h-4 border border-[#1E2333] bg-surface-container rounded-sm group-hover:border-inverse-primary transition-colors">
+<input class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<span class="material-symbols-outlined text-[14px] text-inverse-primary opacity-0 peer-checked:opacity-100 transition-opacity" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body text-body text-on-surface-variant text-[14px] group-hover:text-on-surface transition-colors">Remember me</span>
+</label>
+<a class="font-body text-body text-[14px] text-on-surface-variant hover:text-inverse-primary transition-colors" href="#">Forgot password?</a>
+</div>
+<!-- Submit Button -->
+<button class="mt-xs w-full bg-inverse-primary text-white font-label-caps text-label-caps py-md rounded-lg border-t border-white/20 hover:bg-inverse-primary/90 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] transition-all flex items-center justify-center gap-xs group uppercase" type="submit">
+                    Sign In 
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Admin Login Link -->
+<div class="text-center mt-sm">
+<span class="font-body text-body text-on-surface-variant text-[14px]">or continue as </span>
+<a class="font-body text-body text-[14px] text-inverse-primary hover:text-primary-container transition-colors font-medium" href="#">Admin Login</a>
+</div>
+</div>
+<!-- Footer Security Note -->
+<div class="absolute bottom-layout_margin left-0 right-0 flex justify-center items-center gap-xs text-outline">
+<span class="material-symbols-outlined text-[16px]" data-icon="shield_lock">shield_lock</span>
+<span class="font-label-caps text-label-caps text-[11px] uppercase tracking-wider">End-to-end encrypted session</span>
+</div>
+</div>
+</body></html>

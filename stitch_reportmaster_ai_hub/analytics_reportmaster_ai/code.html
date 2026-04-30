@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analytics &amp; Insights - ReportMaster AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#13131b",
+                      "primary-container": "#8083ff",
+                      "outline-variant": "#464554",
+                      "surface-tint": "#c0c1ff",
+                      "tertiary-fixed": "#ffdcc5",
+                      "error-container": "#93000a",
+                      "tertiary": "#ffb783",
+                      "surface-container-lowest": "#0d0d15",
+                      "on-tertiary-container": "#452000",
+                      "secondary-container": "#2f3aa3",
+                      "primary-fixed": "#e1e0ff",
+                      "on-tertiary-fixed": "#301400",
+                      "surface-bright": "#393841",
+                      "on-tertiary": "#4f2500",
+                      "on-secondary-fixed-variant": "#2f3aa3",
+                      "on-surface": "#e4e1ed",
+                      "on-primary-fixed": "#07006c",
+                      "error": "#ffb4ab",
+                      "primary": "#c0c1ff",
+                      "surface-container": "#1f1f27",
+                      "background": "#13131b",
+                      "on-surface-variant": "#c7c4d7",
+                      "surface-dim": "#13131b",
+                      "on-secondary-container": "#a8afff",
+                      "surface-container-highest": "#34343d",
+                      "surface-container-low": "#1b1b23",
+                      "inverse-on-surface": "#303038",
+                      "secondary-fixed": "#e0e0ff",
+                      "surface-variant": "#34343d",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-secondary-fixed": "#000767",
+                      "on-background": "#e4e1ed",
+                      "tertiary-container": "#d97721",
+                      "surface-container-high": "#292932",
+                      "on-secondary": "#131e8c",
+                      "secondary-fixed-dim": "#bdc2ff",
+                      "on-primary": "#1000a9",
+                      "outline": "#908fa0",
+                      "inverse-primary": "#494bd6",
+                      "secondary": "#bdc2ff",
+                      "on-tertiary-fixed-variant": "#703700",
+                      "inverse-surface": "#e4e1ed",
+                      "tertiary-fixed-dim": "#ffb783",
+                      "on-primary-container": "#0d0096",
+                      "on-error": "#690005"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "layout_margin": "24px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "layout_gutter": "16px",
+                      "xl": "32px",
+                      "sm": "12px",
+                      "xxs": "4px",
+                      "xs": "8px"
+              },
+              "fontFamily": {
+                      "body": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "heading": [
+                              "Inter"
+                      ],
+                      "data-tabular": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "body": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "heading": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "data-tabular": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body text-body antialiased min-h-screen flex">
+<!-- Navigation Drawer -->
+<nav class="fixed left-0 top-0 h-full w-[260px] border-r border-[#1E2333] bg-[#0F1117]/92 backdrop-blur-xl flex flex-col py-6 px-4 space-y-2 z-50">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-8 px-2">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white text-sm font-bold">
+                RM
+            </div>
+<div class="flex flex-col">
+<span class="font-heading text-heading text-on-surface">ReportMaster AI</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant mt-1 uppercase tracking-widest">Institutional Grade • Admin</span>
+</div>
+</div>
+<!-- Links -->
+<div class="flex-1 space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 rounded-DEFAULT text-slate-500 hover:text-slate-200 hover:bg-[#1E2333] group-hover:translate-x-1 transition-all focus-within:ring-1 focus-within:ring-indigo-500" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-caps text-label-caps uppercase">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 rounded-DEFAULT text-slate-500 hover:text-slate-200 hover:bg-[#1E2333] group-hover:translate-x-1 transition-all focus-within:ring-1 focus-within:ring-indigo-500" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="font-label-caps text-label-caps uppercase">Reports</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 rounded-DEFAULT bg-indigo-500/10 text-indigo-400 border-r-2 border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500" href="#">
+<span class="material-symbols-outlined text-[20px] font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="font-label-caps text-label-caps uppercase">Analytics</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 rounded-DEFAULT text-slate-500 hover:text-slate-200 hover:bg-[#1E2333] group-hover:translate-x-1 transition-all focus-within:ring-1 focus-within:ring-indigo-500" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span class="font-label-caps text-label-caps uppercase">History</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 rounded-DEFAULT text-slate-500 hover:text-slate-200 hover:bg-[#1E2333] group-hover:translate-x-1 transition-all focus-within:ring-1 focus-within:ring-indigo-500" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-caps text-label-caps uppercase">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="ml-[260px] flex-1 flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center px-6 py-3 w-full sticky top-0 z-40 bg-[#0F1117]/90 backdrop-blur-md border-b border-[#1E2333]">
+<div class="flex items-center">
+<h1 class="text-lg font-bold bg-gradient-to-br from-indigo-500 to-violet-600 bg-clip-text text-transparent font-inter antialiased tracking-tight">ReportMaster AI</h1>
+</div>
+<button class="bg-indigo-600 text-white font-label-caps text-label-caps px-4 py-2 rounded-DEFAULT border-t border-indigo-400/50 hover:bg-indigo-500 transition-colors focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                New Upload
+            </button>
+</header>
+<!-- Canvas -->
+<div class="flex-1 p-layout_margin space-y-layout_gutter overflow-y-auto">
+<!-- Page Title -->
+<div class="flex items-center justify-between mb-xl">
+<div>
+<h2 class="font-display text-display text-on-surface">Analytics &amp; Insights</h2>
+<p class="font-body text-body text-on-surface-variant mt-1">System-wide performance and query metrics.</p>
+</div>
+<!-- Time Range Filter -->
+<div class="flex items-center space-x-2 bg-surface-container rounded-DEFAULT p-1 border border-[#1E2333]">
+<button class="px-3 py-1 text-sm font-medium text-on-surface-variant hover:text-on-surface rounded-sm transition-colors">24h</button>
+<button class="px-3 py-1 text-sm font-medium bg-surface-container-highest text-on-surface rounded-sm shadow-sm">7d</button>
+<button class="px-3 py-1 text-sm font-medium text-on-surface-variant hover:text-on-surface rounded-sm transition-colors">30d</button>
+</div>
+</div>
+<!-- Metric Cards (Bento Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-layout_gutter mb-xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border border-[#1E2333] rounded-lg p-md relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Queries</span>
+<span class="material-symbols-outlined text-indigo-400 text-[20px]">search_insights</span>
+</div>
+<div class="font-display text-display text-on-surface mb-1">14,208</div>
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-emerald-400 text-[14px]">trending_up</span>
+<span class="font-data-tabular text-data-tabular text-emerald-400 text-xs">+12.5%</span>
+<span class="font-body text-xs text-on-surface-variant ml-1">vs last period</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border border-[#1E2333] rounded-lg p-md relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Avg Response Time</span>
+<span class="material-symbols-outlined text-indigo-400 text-[20px]">timer</span>
+</div>
+<div class="font-display text-display text-on-surface mb-1">1.2s</div>
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-emerald-400 text-[14px]">trending_down</span>
+<span class="font-data-tabular text-data-tabular text-emerald-400 text-xs">-0.3s</span>
+<span class="font-body text-xs text-on-surface-variant ml-1">vs last period</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border border-[#1E2333] rounded-lg p-md relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Active Users</span>
+<span class="material-symbols-outlined text-indigo-400 text-[20px]">group</span>
+</div>
+<div class="font-display text-display text-on-surface mb-1">842</div>
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-emerald-400 text-[14px]">trending_up</span>
+<span class="font-data-tabular text-data-tabular text-emerald-400 text-xs">+5.2%</span>
+<span class="font-body text-xs text-on-surface-variant ml-1">vs last period</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low border border-[#1E2333] rounded-lg p-md relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Doc Processing Rate</span>
+<span class="material-symbols-outlined text-indigo-400 text-[20px]">document_scanner</span>
+</div>
+<div class="font-display text-display text-on-surface mb-1">99.8%</div>
+<div class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">horizontal_rule</span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant text-xs">0.0%</span>
+<span class="font-body text-xs text-on-surface-variant ml-1">vs last period</span>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-layout_gutter mb-xl">
+<!-- Bar Chart Area (Spans 2 cols) -->
+<div class="lg:col-span-2 bg-surface-container-low border border-[#1E2333] rounded-lg p-lg relative">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-indigo-500/20"></div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-heading text-heading text-on-surface text-lg">Queries per Day</h3>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<!-- Faux Bar Chart -->
+<div class="h-64 flex items-end justify-between space-x-2 border-b border-[#1E2333] pb-2 relative">
+<!-- Y-axis lines (Decorative) -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-2">
+<div class="w-full border-t border-[#1E2333] opacity-50"></div>
+<div class="w-full border-t border-[#1E2333] opacity-50"></div>
+<div class="w-full border-t border-[#1E2333] opacity-50"></div>
+<div class="w-full border-t border-[#1E2333] opacity-50"></div>
+<div class="w-full border-t border-[#1E2333] opacity-50"></div>
+</div>
+<!-- Bars -->
+<div class="w-full bg-indigo-500/20 hover:bg-indigo-500/40 rounded-t-sm transition-colors border-t border-indigo-500 relative z-10" style="height: 40%;"></div>
+<div class="w-full bg-indigo-500/20 hover:bg-indigo-500/40 rounded-t-sm transition-colors border-t border-indigo-500 relative z-10" style="height: 65%;"></div>
+<div class="w-full bg-indigo-500/20 hover:bg-indigo-500/40 rounded-t-sm transition-colors border-t border-indigo-500 relative z-10" style="height: 45%;"></div>
+<div class="w-full bg-indigo-500/20 hover:bg-indigo-500/40 rounded-t-sm transition-colors border-t border-indigo-500 relative z-10" style="height: 80%;"></div>
+<div class="w-full bg-indigo-500/20 hover:bg-indigo-500/40 rounded-t-sm transition-colors border-t border-indigo-500 relative z-10" style="height: 55%;"></div>
+<div class="w-full bg-indigo-500/80 hover:bg-indigo-500 rounded-t-sm transition-colors border-t border-indigo-300 relative z-10" style="height: 95%;"></div>
+<div class="w-full bg-indigo-500/20 hover:bg-indigo-500/40 rounded-t-sm transition-colors border-t border-indigo-500 relative z-10" style="height: 70%;"></div>
+</div>
+<!-- X-axis labels -->
+<div class="flex justify-between mt-2 font-data-tabular text-[10px] text-on-surface-variant">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span class="text-indigo-400 font-bold">Sat</span>
+<span>Sun</span>
+</div>
+</div>
+<!-- Donut Chart Area -->
+<div class="bg-surface-container-low border border-[#1E2333] rounded-lg p-lg relative flex flex-col">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-violet-500/20"></div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-heading text-heading text-on-surface text-lg">Queries by Document</h3>
+</div>
+<!-- Faux Donut Chart & Legend -->
+<div class="flex-1 flex flex-col items-center justify-center">
+<!-- CSS Donut approximation -->
+<div class="relative w-40 h-40 rounded-full border-[16px] border-surface-container-highest mb-6 flex items-center justify-center shadow-inner">
+<!-- Faux segments using conic-gradient (Tailwind arbitrary value for demo, styling standard strictly via classes where possible, but conic gradient needs inline or complex setup. We'll use a visual placeholder with borders to stick to constraints) -->
+<div class="absolute inset-0 rounded-full border-[16px] border-indigo-500" style="clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);"></div>
+<div class="absolute inset-0 rounded-full border-[16px] border-violet-500" style="clip-path: polygon(50% 50%, 0 0, 50% 0);"></div>
+<div class="text-center z-10 bg-surface-container-low rounded-full w-24 h-24 flex items-center justify-center flex-col">
+<span class="font-display text-xl text-on-surface">Top</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Sources</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="w-full space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-indigo-500"></div>
+<span class="font-body text-sm text-on-surface">Q3 Financials</span>
+</div>
+<span class="font-data-tabular text-sm text-on-surface-variant">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-violet-500"></div>
+<span class="font-body text-sm text-on-surface">Risk Disclosure</span>
+</div>
+<span class="font-data-tabular text-sm text-on-surface-variant">30%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-surface-container-highest"></div>
+<span class="font-body text-sm text-on-surface">Other</span>
+</div>
+<span class="font-data-tabular text-sm text-on-surface-variant">25%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Most Asked Questions Table -->
+<div class="bg-surface-container-low border border-[#1E2333] rounded-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-surface-tint/20"></div>
+<div class="p-lg border-b border-[#1E2333] flex justify-between items-center bg-surface-container-low">
+<h3 class="font-heading text-heading text-on-surface text-lg">Most Asked Questions</h3>
+<button class="flex items-center space-x-1 text-indigo-400 hover:text-indigo-300 font-label-caps text-label-caps uppercase transition-colors">
+<span>View All</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase border-b border-[#1E2333]">
+<th class="p-md font-semibold">Question Preview</th>
+<th class="p-md font-semibold">Doc Ref</th>
+<th class="p-md font-semibold">User</th>
+<th class="p-md font-semibold text-right">Date</th>
+</tr>
+</thead>
+<tbody class="font-body text-body text-on-surface divide-y divide-[#1E2333]">
+<tr class="hover:bg-[#1E2333] transition-colors group">
+<td class="p-md max-w-md truncate">What is the projected YoY revenue growth for Q4?</td>
+<td class="p-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-data-tabular text-xs">
+<span class="material-symbols-outlined text-[14px] mr-1">description</span>
+                                        Q3_Earnings_Call.pdf
+                                    </span>
+</td>
+<td class="p-md text-on-surface-variant">jsmith@corp.com</td>
+<td class="p-md text-right font-data-tabular text-on-surface-variant">Oct 24, 14:30</td>
+</tr>
+<tr class="hover:bg-[#1E2333] transition-colors group">
+<td class="p-md max-w-md truncate">Summarize the main risk factors mentioned in section 3.</td>
+<td class="p-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-violet-500/10 text-violet-400 border border-violet-500/20 font-data-tabular text-xs">
+<span class="material-symbols-outlined text-[14px] mr-1">description</span>
+                                        Annual_Risk_Report.docx
+                                    </span>
+</td>
+<td class="p-md text-on-surface-variant">ataylor@corp.com</td>
+<td class="p-md text-right font-data-tabular text-on-surface-variant">Oct 24, 11:15</td>
+</tr>
+<tr class="hover:bg-[#1E2333] transition-colors group">
+<td class="p-md max-w-md truncate">Did the CEO mention any upcoming mergers?</td>
+<td class="p-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-data-tabular text-xs">
+<span class="material-symbols-outlined text-[14px] mr-1">description</span>
+                                        Q3_Earnings_Call.pdf
+                                    </span>
+</td>
+<td class="p-md text-on-surface-variant">mlee@corp.com</td>
+<td class="p-md text-right font-data-tabular text-on-surface-variant">Oct 23, 09:45</td>
+</tr>
+<tr class="hover:bg-[#1E2333] transition-colors group">
+<td class="p-md max-w-md truncate">Extract all compliance requirements regarding GDPR.</td>
+<td class="p-md">
+<span class="inline-flex items-center px-2 py-1 rounded bg-slate-500/10 text-slate-400 border border-slate-500/20 font-data-tabular text-xs">
+<span class="material-symbols-outlined text-[14px] mr-1">description</span>
+                                        Data_Privacy_Policy_v2.pdf
+                                    </span>
+</td>
+<td class="p-md text-on-surface-variant">rpatel@corp.com</td>
+<td class="p-md text-right font-data-tabular text-on-surface-variant">Oct 22, 16:20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>
